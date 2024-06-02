@@ -1,0 +1,16 @@
+<!-- file_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File List</title>
+</head>
+<body>
+    <h1>Available Files:</h1>
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('download_file', file=file) }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
